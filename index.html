@@ -3,65 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="css/style.css">
+    <title>Shingi | Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Hi, I'm Shingi</h1>
-        <p>iOS Developer | Swift Enthusiast | Problem Solver</p>
-    </header>
-
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>I build apps with SwiftUI, CloudKit, and Python automation. I love teaching and sharing what I learn.</p>
-        </section>
-
-        <section>
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>TapDuel</strong> — Multiplayer reflex game built with GameKit</li>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">YourName</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </section>
-    </main>
+        </div>
+    </nav>
 
-    <footer>
-        <p>Connect with me on <a href="https://github.com/gratochuck">GitHub</a></p>
-    </footer>
-</body>
-</html><link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <h1>Hi, I'm Shingi</h1>
-        <p>iOS Developer | Swift Enthusiast | Problem Solver</p>
-    </header>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm Your Name</h1>
+                <p class="subtitle">Full Stack Developer | Problem Solver | Tech Enthusiast</p>
+                <p class="description">I build beautiful and functional web applications. Let's create something amazing together.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <main>
-        <section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
             <h2>About Me</h2>
-            <p>I build apps with SwiftUI, CloudKit, and Python automation. I love teaching and sharing what I learn.</p>
-        </section>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Welcome! I'm a passionate developer with experience in building web applications. I love turning ideas into reality through code and creative problem-solving.</p>
+                    <p>With a background in [Your Background], I've worked on projects ranging from [Project Type 1] to [Project Type 2]. I'm always eager to learn new technologies and best practices.</p>
+                    <p>When I'm not coding, you can find me [Your Interests/Hobbies].</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/300" alt="Your Photo" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section>
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>TapDuel</strong> — Multiplayer reflex game built with GameKit</li>
-            </ul>
-        </section>
-    </main>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/300x200" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project One</h3>
+                        <p>A brief description of what this project does and the technologies used.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link">View Project</a>
+                            <a href="#" class="link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
 
-    <footer>
-        <p>Connect with me on <a href="https://github.com/gratochuck">GitHub</a></p>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/300x200" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Two</h3>
+                        <p>A brief description of what this project does and the technologies used.</p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link">View Project</a>
+                            <a href="#" class="link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/300x200" alt="Project 3">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Three</h3>
+                        <p>A brief description of what this project does and the technologies used.</p>
+                        <div class="project-tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">Firebase</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link">View Project</a>
+                            <a href="#" class="link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript / TypeScript</li>
+                        <li>React / Vue.js</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>Python / Django</li>
+                        <li>RESTful APIs</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Database</h3>
+                    <ul>
+                        <li>MongoDB</li>
+                        <li>PostgreSQL</li>
+                        <li>Firebase</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Git / GitHub</li>
+                        <li>Docker</li>
+                        <li>CI/CD Pipelines</li>
+                        <li>AWS / Azure</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="contact-subtitle">I'm always interested in hearing about new projects and opportunities.</p>
+            <div class="contact-content">
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4>Email</h4>
+                        <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Location</h4>
+                        <p>Your City, Your Country</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Social</h4>
+                        <div class="social-links">
+                            <a href="#" target="_blank">GitHub</a>
+                            <a href="#" target="_blank">LinkedIn</a>
+                            <a href="#" target="_blank">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Your Name. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
-
-<body

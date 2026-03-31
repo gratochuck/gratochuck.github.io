@@ -3,65 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>My Portfolio</title>
+    <title>Portfolio</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #6b73ff, #000dff);
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            transition: all 0.3s ease;
-        }
-        h1 {
-            font-size: 3rem;
-            animation: fadeIn 2s;
+            animation: fadeIn 1s;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        .project-card {
-            background-color: rgba(255, 255, 255, 0.1);
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .skills, .projects {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 20px;
             margin: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
+            flex: 1;
+            min-width: 250px;
+            transition: transform 0.2s;
         }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        .card:hover {
+            transform: scale(1.05);
         }
-        .typography {
-            font-size: 1.5rem;
-            line-height: 1.6;
-        }
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            .typography {
-                font-size: 1.2rem;
-            }
+        footer {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Professional Portfolio</h1>
-    <div class="project-card">
-        <h2>Project Title</h2>
-        <p class="typography">A brief description of the project can go here. Use this area to highlight your skills and experiences.</p>
+    <div class="container">
+        <h1>About Me</h1>
+        <p>My name is [Your Name]. I am a [Your Profession] with experience in [Your Experience]. I love working on innovative projects to make a positive impact.</p>
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="card">Skill 1</div>
+            <div class="card">Skill 2</div>
+            <div class="card">Skill 3</div>
+            <div class="card">Skill 4</div>
+            <div class="card">Skill 5</div>
+            <div class="card">Skill 6</div>
+            <div class="card">Skill 7</div>
+            <div class="card">Skill 8</div>
+        </div>
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="card">
+                <h3>Project 1</h3>
+                <p>Description of Project 1.</p>
+            </div>
+            <div class="card">
+                <h3>Project 2</h3>
+                <p>Description of Project 2.</p>
+            </div>
+            <div class="card">
+                <h3>Project 3</h3>
+                <p>Description of Project 3.</p>
+            </div>
+        </div>
+        <h2>Contact</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
     </div>
-    <div class="project-card">
-        <h2>Another Project Title</h2>
-        <p class="typography">Details about another project, showcasing your expertise and accomplishments.</p>
-    </div>
+    <footer>
+        <p>© 2026 [Your Name]. All rights reserved.</p>
+    </footer>
 </body>
 </html>

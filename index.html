@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +9,10 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050505; color: #e2e8f0; margin: 0; overflow-x: hidden; }
-        .bg-fixed-img { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(5, 5, 5, 0.9), rgba(5, 5, 5, 0.9)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; z-index: -1; }
+        .bg-fixed-img { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(5, 5, 5, 0.92), rgba(5, 5, 5, 0.92)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; z-index: -1; }
         .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .typing-cursor::after { content: '|'; animation: blink 0.8s infinite; color: #60a5fa; }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-        #bot-console::-webkit-scrollbar { width: 4px; }
-        #bot-console::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
     </style>
 </head>
 <body class="antialiased">
@@ -24,58 +22,37 @@
     <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/60 backdrop-blur-xl">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
             <span class="text-lg md:text-xl font-extrabold text-blue-400 italic tracking-tighter">gratochuck</span>
-            <a href="mailto:shingi@example.com" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 md:px-6 rounded-full text-xs md:text-sm font-bold shadow-lg shadow-blue-900/40 transition-transform active:scale-95">Get in Touch</a>
+            <a href="mailto:shingi@example.com" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full text-xs font-bold transition-transform active:scale-95 shadow-lg shadow-blue-900/40">Get in Touch</a>
         </div>
     </nav>
 
     <section class="min-h-screen flex items-center justify-center px-6 text-center">
         <div class="max-w-4xl">
-            <p class="text-blue-500 font-mono text-[10px] tracking-[0.4em] mb-4 uppercase font-bold tracking-widest">// Web & Mobile Developer</p>
             <h1 class="text-5xl md:text-8xl font-extrabold mb-6 text-white tracking-tighter italic">I'm <span id="type-target" class="typing-cursor text-blue-400"></span></h1>
-            <p class="text-base md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto font-light leading-relaxed">Specializing in high-performance web interfaces and real-time automated solutions.</p>
-            <a href="#projects" class="inline-block glass-card px-8 py-4 rounded-2xl hover:bg-white/5 transition-all font-semibold border-white/20">View Featured Work</a>
+            <p class="text-base md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto font-light leading-relaxed tracking-wide">High-performance Web Interfaces & Real-time Automated Systems.</p>
+            <a href="#projects" class="inline-block glass-card px-8 py-4 rounded-2xl hover:bg-white/5 transition-all font-semibold border-white/20 uppercase tracking-widest text-[10px]">Explore Work</a>
         </div>
     </section>
 
     <section id="projects" class="py-24 px-6 bg-black/30">
         <div class="max-w-6xl mx-auto">
-            <h3 class="text-2xl md:text-3xl font-bold mb-12 text-white text-center">Interactive Portfolio</h3>
+            <h3 class="text-2xl md:text-3xl font-bold mb-16 text-white text-center tracking-tighter">Interactive Showcase</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 
                 <div onclick="openBotModal()" class="glass-card rounded-3xl overflow-hidden group hover:border-blue-500/50 transition-all duration-500 relative cursor-pointer">
-                    <div class="absolute top-4 right-4 flex items-center gap-2 px-3 py-1 bg-black/40 backdrop-blur-md rounded-full border border-green-500/30 z-10">
-                        <span class="relative flex h-2 w-2">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                        </span>
-                        <span class="text-[9px] font-bold text-green-400 uppercase tracking-widest">Bot Preview</span>
-                    </div>
                     <div class="h-52 bg-slate-900/50 flex flex-col items-center justify-center border-b border-white/5">
-                        <i data-lucide="bot" class="text-blue-400 w-16 h-16 mb-2 group-hover:scale-110 transition-transform"></i>
-                        <span class="text-[10px] font-mono text-blue-300/40 uppercase tracking-[0.2em]">Click to Run System</span>
+                        <i data-lucide="bot" class="text-blue-400 w-12 h-12 mb-4 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-[10px] font-mono text-blue-300/40 uppercase tracking-[0.2em]">Trading Bot Logic</span>
                     </div>
-                    <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-3 text-white">Algorithm Trading Bot</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed font-light">Custom Python infrastructure for <span class="text-blue-300">RSI & MA</span> trade execution on Deriv API.</p>
-                    </div>
+                    <div class="p-8"><h4 class="text-xl font-bold mb-2 text-white italic">Algorithm Trading</h4><p class="text-slate-400 text-sm font-light">Python execution for Deriv API.</p></div>
                 </div>
 
                 <div onclick="openDuelModal()" class="glass-card rounded-3xl overflow-hidden group hover:border-blue-500/50 transition-all duration-500 relative cursor-pointer">
-                    <div class="absolute top-4 right-4 flex items-center gap-2 px-3 py-1 bg-black/40 backdrop-blur-md rounded-full border border-blue-500/30 z-10">
-                        <span class="relative flex h-2 w-2">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-                        </span>
-                        <span class="text-[9px] font-bold text-blue-400 uppercase tracking-widest">Live Duel</span>
-                    </div>
                     <div class="h-52 bg-slate-900/50 flex flex-col items-center justify-center border-b border-white/5">
-                        <i data-lucide="swords" class="text-blue-400 w-16 h-16 mb-2 group-hover:scale-110 transition-transform"></i>
-                        <span class="text-[10px] font-mono text-blue-300/40 uppercase tracking-[0.2em]">Click to Start Match</span>
+                        <i data-lucide="swords" class="text-blue-400 w-12 h-12 mb-4 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-[10px] font-mono text-blue-300/40 uppercase tracking-[0.2em]">Mobile Game Dev</span>
                     </div>
-                    <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-3 text-white">TapDuel Multiplayer</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed font-light">Real-time PvP reflex game. Demonstrating <span class="text-blue-300">GameKit</span> and low-latency networking.</p>
-                    </div>
+                    <div class="p-8"><h4 class="text-xl font-bold mb-2 text-white italic">TapDuel Multiplayer</h4><p class="text-slate-400 text-sm font-light">Real-time PvP with GameKit.</p></div>
                 </div>
 
             </div>
@@ -84,37 +61,45 @@
 
     <div id="bot-modal" class="fixed inset-0 z-[100] flex items-center justify-center px-6 hidden bg-black/90 backdrop-blur-md">
         <div class="glass-card w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl">
-            <div class="bg-slate-900/80 p-4 border-b border-white/10 flex justify-between items-center">
-                <span class="text-xs font-mono text-slate-400 tracking-widest">deriv_bot_v3.py — active_log</span>
-                <button onclick="closeModals()" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+            <div class="bg-slate-900/80 p-4 border-b border-white/10 flex justify-between">
+                <span class="text-[10px] font-mono text-slate-400 tracking-widest">deriv_v3.log</span>
+                <button onclick="closeModals()"><i data-lucide="x" class="w-5 h-5 text-slate-500 hover:text-white"></i></button>
             </div>
-            <div id="bot-console" class="p-6 h-80 overflow-y-auto font-mono text-[11px] bg-black/40"></div>
+            <div id="bot-console" class="p-6 h-64 overflow-y-auto font-mono text-xs bg-black/40"></div>
         </div>
     </div>
 
     <div id="duel-modal" class="fixed inset-0 z-[100] flex items-center justify-center px-6 hidden bg-black/90 backdrop-blur-md">
-        <div class="glass-card w-full max-w-sm rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white/10">
-            <div class="p-8 flex flex-col items-center text-center">
-                <div id="matchmaking">
-                    <div class="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-6 mx-auto"></div>
-                    <h5 class="text-xl font-bold text-white mb-2 italic">Searching for opponent...</h5>
-                    <p class="text-slate-500 text-xs">GameKit Matchmaking Service</p>
+        <div class="glass-card w-full max-w-sm rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white/10 p-8 text-center">
+            <button onclick="closeModals()" class="absolute top-6 right-6"><i data-lucide="x" class="w-5 h-5 text-slate-500"></i></button>
+            
+            <div id="search-phase">
+                <div class="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-6 mx-auto"></div>
+                <h5 class="text-xl font-bold text-white mb-2 italic">Searching for opponent...</h5>
+                <p class="text-slate-500 text-[10px] uppercase tracking-widest">GameKit Lobby</p>
+            </div>
+
+            <div id="found-phase" class="hidden">
+                <div class="flex items-center justify-center gap-4 mb-8">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center font-bold text-2xl">You</div>
+                    <span class="text-red-500 font-black italic">VS</span>
+                    <div class="w-16 h-16 bg-slate-800 rounded-full flex items-center justify-center font-bold text-xs">Player_88</div>
                 </div>
-                <div id="battle-area" class="hidden w-full">
-                    <div class="flex justify-between mb-12">
-                        <div class="text-left"><p class="text-[10px] text-blue-400 uppercase">You</p><p id="my-score" class="text-4xl font-black">0</p></div>
-                        <div class="text-right"><p class="text-[10px] text-red-400 uppercase">Pro_Player_88</p><p id="cpu-score" class="text-4xl font-black text-slate-500">0</p></div>
-                    </div>
-                    <div class="w-full bg-slate-800 h-2 rounded-full mb-8 overflow-hidden">
-                        <div id="score-bar" class="w-1/2 h-full bg-blue-500 transition-all duration-300"></div>
-                    </div>
-                    <p class="text-xs italic text-blue-300 animate-pulse">Syncing GameKit State...</p>
+                <button onclick="startBattle()" class="w-full bg-blue-600 py-4 rounded-2xl font-bold uppercase tracking-widest text-xs">Ready? Start Duel</button>
+            </div>
+
+            <div id="battle-phase" class="hidden">
+                <div class="flex justify-between mb-8">
+                    <div class="text-left"><p class="text-4xl font-black" id="my-score">0</p></div>
+                    <div class="text-right"><p class="text-4xl font-black text-slate-600" id="cpu-score">0</p></div>
                 </div>
+                <div class="w-full bg-slate-800 h-2 rounded-full mb-4 overflow-hidden">
+                    <div id="score-bar" class="w-1/2 h-full bg-blue-500 transition-all duration-100"></div>
+                </div>
+                <p class="text-[10px] text-blue-400 animate-pulse tracking-widest uppercase">Syncing Tap State...</p>
             </div>
         </div>
     </div>
-
-    <footer class="py-12 text-center text-slate-600 text-[9px] tracking-[0.5em] uppercase font-bold">© 2026 gratochuck | Innovating at Scale</footer>
 
     <script>
         lucide.createIcons();
@@ -124,65 +109,66 @@
         function type() { if (i < nameText.length) { target.textContent += nameText.charAt(i); i++; setTimeout(type, 180); } }
         window.onload = () => { setTimeout(type, 500); };
 
-        let intervals = [];
-        function closeModals() { 
-            document.getElementById('bot-modal').classList.add('hidden'); 
+        let activeIntervals = [];
+
+        function closeModals() {
+            document.getElementById('bot-modal').classList.add('hidden');
             document.getElementById('duel-modal').classList.add('hidden');
-            intervals.forEach(clearInterval);
-            intervals = [];
+            activeIntervals.forEach(clearInterval);
+            activeIntervals = [];
         }
 
-        // BOT LOGIC
+        // BOT SYSTEM
         function openBotModal() {
             document.getElementById('bot-modal').classList.remove('hidden');
             const consoleEl = document.getElementById('bot-console');
-            consoleEl.innerHTML = "<p class='text-blue-400'>[SYS] Connecting to Deriv WebSocket...</p>";
-            const logs = [
-                "<span class='text-slate-400'>[TIC] EUR/USD: 1.0924</span>",
-                "<span class='text-slate-400'>[ANL] RSI: 48.2 (Stable)</span>",
-                "<span class='text-yellow-400'>[WRN] EMA (50/200) narrowing...</span>",
-                "<span class='text-green-400 font-bold'>[TRD] CALL EXECUTED @ 1.0925</span>",
-                "<span class='text-blue-400'>[RES] Contract Secured: +$0.85</span>"
-            ];
+            consoleEl.innerHTML = "";
+            const logs = ["[SYS] Connecting...", "[ANL] RSI: 42.5", "[TRD] BUY @ 1.0924", "[RES] WIN: +$0.85"];
             let idx = 0;
-            intervals.push(setInterval(() => {
+            activeIntervals.push(setInterval(() => {
                 const p = document.createElement('p');
-                p.innerHTML = logs[idx % logs.length];
-                p.className = "mb-1";
+                p.className = "mb-1 text-blue-300";
+                p.innerText = logs[idx % logs.length];
                 consoleEl.appendChild(p);
                 consoleEl.scrollTop = consoleEl.scrollHeight;
                 idx++;
-            }, 1000));
+            }, 800));
         }
 
-        // TAPDUEL LOGIC
+        // TAPDUEL SYSTEM
         function openDuelModal() {
             document.getElementById('duel-modal').classList.remove('hidden');
-            document.getElementById('matchmaking').classList.remove('hidden');
-            document.getElementById('battle-area').classList.add('hidden');
-            
+            document.getElementById('search-phase').classList.remove('hidden');
+            document.getElementById('found-phase').classList.add('hidden');
+            document.getElementById('battle-phase').classList.add('hidden');
+
             setTimeout(() => {
-                document.getElementById('matchmaking').classList.add('hidden');
-                document.getElementById('battle-area').classList.remove('hidden');
-                startBattle();
-            }, 2500);
+                document.getElementById('search-phase').classList.add('hidden');
+                document.getElementById('found-phase').classList.remove('hidden');
+            }, 2000);
         }
 
         function startBattle() {
-            let myScore = 0; let cpuScore = 0;
-            const myEl = document.getElementById('my-score');
-            const cpuEl = document.getElementById('cpu-score');
-            const bar = document.getElementById('score-bar');
+            document.getElementById('found-phase').classList.add('hidden');
+            document.getElementById('battle-phase').classList.remove('hidden');
             
-            intervals.push(setInterval(() => {
-                myScore += Math.floor(Math.random() * 3) + 1;
-                cpuScore += Math.floor(Math.random() * 3) + 1;
-                myEl.innerText = myScore;
-                cpuEl.innerText = cpuScore;
-                const percent = (myScore / (myScore + cpuScore)) * 100;
-                bar.style.width = percent + "%";
-                if (myScore > 100 || cpuScore > 100) closeModals();
-            }, 200));
+            let mS = 0; let cS = 0;
+            const mE = document.getElementById('my-score');
+            const cE = document.getElementById('cpu-score');
+            const sB = document.getElementById('score-bar');
+
+            activeIntervals.push(setInterval(() => {
+                mS += Math.floor(Math.random() * 5);
+                cS += Math.floor(Math.random() * 5);
+                mE.innerText = mS;
+                cE.innerText = cS;
+                sB.style.width = (mS / (mS + cS)) * 100 + "%";
+                
+                if(mS > 150 || cS > 150) {
+                    alert(mS > cS ? "YOU WIN! GameKit Match Ended." : "Player_88 Wins. Retrying Sync...");
+                    closeModals();
+                }
+            }, 100));
         }
     </script>
 </body>

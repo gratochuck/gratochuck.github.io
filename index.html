@@ -22,6 +22,7 @@
             left: 0;
             width: 100%;
             height: 100%;
+            /* High-quality tech background with dark overlay for readability */
             background-image: linear-gradient(rgba(5, 5, 5, 0.85), rgba(5, 5, 5, 0.85)), 
                               url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2000');
             background-size: cover;
@@ -84,55 +85,80 @@
         <h3 class="text-2xl md:text-3xl font-bold mb-12 text-center">Core Expertise</h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="glass-card p-8 rounded-3xl group">
-                <i data-lucide="layout" class="text-blue-400 mb-4 group-hover:scale-110 transition-transform"></i>
+                <i data-lucide="layout" class="text-blue-400 mb-4 group-hover:rotate-6 transition-transform"></i>
                 <h4 class="text-xl font-bold mb-2">Web Design</h4>
-                <p class="text-slate-400 text-sm">Responsive, fast-loading sites using modern React and Tailwind.</p>
+                <p class="text-slate-400 text-sm leading-relaxed">Responsive, fast-loading sites using modern React, Tailwind, and GitHub Pages.</p>
             </div>
             <div class="glass-card p-8 rounded-3xl group">
-                <i data-lucide="terminal" class="text-blue-400 mb-4 group-hover:scale-110 transition-transform"></i>
+                <i data-lucide="terminal" class="text-blue-400 mb-4 group-hover:rotate-6 transition-transform"></i>
                 <h4 class="text-xl font-bold mb-2">Automation</h4>
-                <p class="text-slate-400 text-sm">Python scripts for data processing and automated trading bots.</p>
+                <p class="text-slate-400 text-sm leading-relaxed">Python scripts for data processing and custom-built automated trading bots.</p>
             </div>
             <div class="glass-card p-8 rounded-3xl group">
-                <i data-lucide="database" class="text-blue-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                <h4 class="text-xl font-bold mb-2">Technical Analysis</h4>
-                <p class="text-slate-400 text-sm">Integrating real-time market APIs and data visualizations.</p>
+                <i data-lucide="database" class="text-blue-400 mb-4 group-hover:rotate-6 transition-transform"></i>
+                <h4 class="text-xl font-bold mb-2">Technical Systems</h4>
+                <p class="text-slate-400 text-sm leading-relaxed">Integrating real-time market APIs and low-latency multiplayer game frameworks.</p>
             </div>
         </div>
     </section>
 
     <section id="projects" class="py-24 px-6 bg-black/30">
         <div class="max-w-6xl mx-auto">
-            <h3 class="text-2xl md:text-3xl font-bold mb-12">Recent Projects</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="glass-card rounded-3xl overflow-hidden group">
-                    <div class="h-48 bg-slate-900/50 flex items-center justify-center border-b border-white/5">
-                        <i data-lucide="bar-chart-3" class="text-blue-500/10 w-16 h-16 group-hover:scale-110 transition-transform"></i>
+            <h3 class="text-2xl md:text-3xl font-bold mb-12">Featured Work</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                
+                <div class="glass-card rounded-3xl overflow-hidden group hover:border-blue-500/50 transition-all duration-500">
+                    <div class="h-52 bg-slate-900/50 flex flex-col items-center justify-center border-b border-white/5 relative overflow-hidden">
+                        <i data-lucide="trending-up" class="text-blue-500/10 w-24 h-24 absolute -right-4 -bottom-4 rotate-12"></i>
+                        <i data-lucide="bot" class="text-blue-400 w-16 h-16 mb-2 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-[10px] font-mono text-blue-300/60 uppercase tracking-[0.2em]">Automated Systems</span>
                     </div>
                     <div class="p-8">
-                        <h4 class="text-xl font-bold mb-2">Trading Bot Infrastructure</h4>
-                        <p class="text-slate-400 text-sm mb-6 font-light italic">High-frequency RSI/MA strategies automated in Python.</p>
-                        <div class="flex gap-2">
-                            <span class="text-[10px] uppercase font-bold tracking-wider bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20">Python</span>
+                        <h4 class="text-2xl font-bold mb-3 text-white">Trading Bot Infrastructure</h4>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            A high-frequency trading infrastructure utilizing <span class="text-blue-300">RSI</span> and <span class="text-blue-300">Moving Average</span> triggers. Built for precision market execution.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] font-bold bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20">Python</span>
+                            <span class="text-[10px] font-bold bg-slate-500/10 text-slate-300 px-3 py-1 rounded-full border border-white/10">Deriv API</span>
                         </div>
                     </div>
                 </div>
+
+                <div class="glass-card rounded-3xl overflow-hidden group hover:border-blue-500/50 transition-all duration-500">
+                    <div class="h-52 bg-slate-900/50 flex flex-col items-center justify-center border-b border-white/5 relative overflow-hidden">
+                        <i data-lucide="swords" class="text-blue-500/10 w-24 h-24 absolute -right-4 -bottom-4 rotate-12"></i>
+                        <i data-lucide="smartphone" class="text-blue-400 w-16 h-16 mb-2 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-[10px] font-mono text-blue-300/60 uppercase tracking-[0.2em]">Game Development</span>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-3 text-white">TapDuel</h4>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            A competitive multiplayer reflex game. Leverages <span class="text-blue-300">GameKit</span> for real-time matchmaking and low-latency interaction.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] font-bold bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20">Swift</span>
+                            <span class="text-[10px] font-bold bg-slate-500/10 text-slate-300 px-3 py-1 rounded-full border border-white/10">GameKit</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <footer class="py-16 border-t border-white/5 text-center px-6">
-        <div class="flex justify-center gap-6 mb-8">
-            <a href="https://github.com/gratochuck" class="text-slate-500 hover:text-white transition-all"><i data-lucide="github"></i></a>
+        <div class="flex justify-center gap-6 mb-8 text-slate-500">
+            <a href="https://github.com/gratochuck" class="hover:text-white transition-colors"><i data-lucide="github"></i></a>
         </div>
         <p class="text-slate-600 text-[10px] tracking-[0.4em] uppercase font-bold">© 2026 gratochuck | Built for the Future</p>
     </footer>
 
     <script>
-        // Initialize Icons
+        // Start Lucide Icons
         lucide.createIcons();
 
-        // Typing Effect
+        // Typing Effect Configuration
         const nameText = "Shingi";
         const target = document.getElementById('type-target');
         let i = 0;
@@ -145,8 +171,10 @@
             }
         }
         
-        // Safety check to ensure script runs after load
-        window.addEventListener('DOMContentLoaded', type);
+        // This ensures the script waits for the page to load before typing
+        window.onload = function() {
+            type();
+        };
     </script>
 </body>
 </html>

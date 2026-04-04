@@ -7,140 +7,139 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
         
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #050505; /* Deep base color */
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #050505;
             color: #e2e8f0;
-            scroll-behavior: smooth;
             margin: 0;
             overflow-x: hidden;
         }
 
-        /* 1. THE BACKGROUND IMAGE LAYER */
-        .bg-overlay {
+        /* Fixed Background Image */
+        .bg-img {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('http://googleusercontent.com/image_collection/image_retrieval/7696159325401556679_0');
+            /* Reliable dark tech background */
+            background-image: linear-gradient(rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.8)), 
+                              url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2000');
             background-size: cover;
             background-position: center;
-            opacity: 0.25; /* Subtle visibility */
             z-index: -1;
-            filter: grayscale(20%) brightness(50%);
         }
 
-        /* Animated Typing Effect */
-        .typing-text::after {
-            content: '|';
-            animation: blink 0.7s infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-
-        /* Glassmorphism Styles */
         .glass-card {
-            background: rgba(255, 255, 255, 0.04);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
         }
+
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 0.8s infinite;
+            color: #60a5fa;
+        }
+
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
     </style>
 </head>
 <body>
 
-    <div class="bg-overlay"></div>
+    <div class="bg-img"></div>
 
-    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/40 backdrop-blur-xl">
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-md">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-slate-300 bg-clip-text text-transparent italic">
-                gratochuck
-            </span>
-            <div class="hidden md:flex space-x-8 text-sm font-medium items-center text-slate-300">
-                <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
-                <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
-                <a href="mailto:contact@yourdomain.com" class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2 rounded-full transition-all shadow-[0_0_25px_rgba(37,99,235,0.4)] font-bold">
+            <span class="text-xl font-extrabold text-blue-400 tracking-tighter italic">gratochuck</span>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#skills" class="text-sm hover:text-blue-400 transition-colors">Skills</a>
+                <a href="#projects" class="text-sm hover:text-blue-400 transition-colors">Projects</a>
+                <a href="mailto:shingi@example.com" class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2 rounded-full font-bold shadow-[0_0_20px_rgba(37,99,235,0.3)]">
                     Get in Touch
                 </a>
             </div>
         </div>
     </nav>
 
-    <section class="relative min-h-screen flex items-center justify-center px-6 pt-20">
-        <div class="max-w-4xl mx-auto text-center">
-            <p class="text-blue-500 font-mono mb-4 tracking-[0.3em] uppercase text-xs font-bold">// Innovate & Automate</p>
-            <h1 class="text-6xl md:text-8xl font-extrabold mb-8 tracking-tighter text-white">
-                I'm <span id="typing-element" class="text-blue-400 typing-text"></span>
+    <section class="min-h-screen flex items-center justify-center px-6 pt-20">
+        <div class="max-w-4xl text-center">
+            <p class="text-blue-500 font-mono text-sm tracking-widest mb-4 uppercase font-bold">// Web Developer & Programmer</p>
+            <h1 class="text-6xl md:text-8xl font-extrabold mb-6 text-white tracking-tighter">
+                I'm <span id="type-box" class="typing-cursor text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600"></span>
             </h1>
-            <p class="text-xl md:text-2xl text-slate-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-                A <span class="text-blue-300 font-medium">Freelance Web Developer</span> building modern digital experiences and technical trading infrastructure.
+            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Specializing in <span class="text-white">Freelance Web Development</span> and 
+                <span class="text-white">Python Automation</span>. Based in Qatar, building for the world.
             </p>
-            <div class="flex flex-col md:flex-row justify-center gap-6 items-center">
-                <a href="#projects" class="px-8 py-4 glass-card rounded-2xl hover:bg-white/10 transition-all flex items-center gap-3 group">
-                    View Portfolio <i data-lucide="external-link" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                </a>
+            <div class="flex justify-center gap-4">
+                <a href="#projects" class="glass-card px-8 py-4 hover:bg-white/5 transition-all font-semibold border-white/20">Explore Projects</a>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-32 px-6 relative">
+    <section id="skills" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="glass-card p-10 rounded-[2.5rem] group hover:border-blue-500/50 transition-all duration-700">
-                    <div class="w-14 h-14 bg-blue-600/20 rounded-2xl flex items-center justify-center text-blue-400 mb-8 group-hover:rotate-6 transition-transform">
-                        <i data-lucide="code-2" size="32"></i>
-                    </div>
-                    <h4 class="text-2xl font-bold mb-4 text-white">Web Development</h4>
-                    <p class="text-slate-400 leading-relaxed">Expertise in building responsive applications with React and high-performance CSS architectures.</p>
+            <h3 class="text-3xl font-bold mb-16 text-center">Technical Expertise</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 group hover:border-blue-500/50 transition-all duration-500">
+                    <i data-lucide="monitor" class="text-blue-400 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-xl font-bold mb-2">Frontend</h4>
+                    <p class="text-slate-400 text-sm">Responsive UIs using React, Tailwind CSS, and modern JavaScript.</p>
                 </div>
-
-                <div class="glass-card p-10 rounded-[2.5rem] group hover:border-blue-500/50 transition-all duration-700">
-                    <div class="w-14 h-14 bg-blue-600/20 rounded-2xl flex items-center justify-center text-blue-400 mb-8 group-hover:rotate-6 transition-transform">
-                        <i data-lucide="terminal" size="32"></i>
-                    </div>
-                    <h4 class="text-2xl font-bold mb-4 text-white">Automation</h4>
-                    <p class="text-slate-400 leading-relaxed">Designing custom Python scripts and automated trading bots for market efficiency and data analysis.</p>
+                <div class="glass-card p-8 group hover:border-blue-500/50 transition-all duration-500">
+                    <i data-lucide="cpu" class="text-blue-400 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-xl font-bold mb-2">Automation</h4>
+                    <p class="text-slate-400 text-sm">Custom Python scripts and high-frequency trading bots.</p>
                 </div>
-
-                <div class="glass-card p-10 rounded-[2.5rem] group hover:border-blue-500/50 transition-all duration-700">
-                    <div class="w-14 h-14 bg-blue-600/20 rounded-2xl flex items-center justify-center text-blue-400 mb-8 group-hover:rotate-6 transition-transform">
-                        <i data-lucide="layers" size="32"></i>
-                    </div>
-                    <h4 class="text-2xl font-bold mb-4 text-white">Digital Strategy</h4>
-                    <p class="text-slate-400 leading-relaxed">Combining technical skills with brand growth strategies to build impactful online presences.</p>
+                <div class="glass-card p-8 group hover:border-blue-500/50 transition-all duration-500">
+                    <i data-lucide="database" class="text-blue-400 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-xl font-bold mb-2">Backend</h4>
+                    <p class="text-slate-400 text-sm">Scalable server-side logic and API integrations.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 border-t border-white/5 text-center">
-        <div class="flex justify-center gap-8 mb-8">
-            <a href="https://github.com/gratochuck" class="text-slate-500 hover:text-blue-400 transition-all scale-125"><i data-lucide="github"></i></a>
-            <a href="#" class="text-slate-500 hover:text-blue-400 transition-all scale-125"><i data-lucide="linkedin"></i></a>
+    <section id="projects" class="py-24 px-6 bg-black/20">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl font-bold mb-12">Featured Work</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-card overflow-hidden group">
+                    <div class="h-48 bg-slate-900 flex items-center justify-center border-b border-white/5">
+                        <i data-lucide="line-chart" class="text-blue-500/20 w-16 h-16 group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-xl font-bold mb-2">Trading Algorithm</h4>
+                        <p class="text-slate-400 text-sm mb-6">Automated RSI/MA strategy bot developed in Python.</p>
+                        <span class="text-xs font-mono bg-blue-500/10 text-blue-300 px-3 py-1 rounded-full border border-blue-500/20">Python</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p class="text-slate-600 text-sm tracking-widest uppercase">© 2026 gratochuck | All Rights Reserved</p>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center">
+        <p class="text-slate-500 text-sm tracking-widest uppercase mb-4">© 2026 gratochuck</p>
+        <div class="flex justify-center gap-6">
+            <a href="https://github.com/gratochuck" class="text-slate-400 hover:text-white"><i data-lucide="github"></i></a>
+        </div>
     </footer>
 
     <script>
         lucide.createIcons();
-
-        // Typing Effect Script
         const name = "Shingi";
-        const element = document.getElementById('typing-element');
-        let index = 0;
-
+        const target = document.getElementById('type-box');
+        let idx = 0;
         function type() {
-            if (index < name.length) {
-                element.textContent += name.charAt(index);
-                index++;
-                setTimeout(type, 180);
+            if (idx < name.length) {
+                target.textContent += name.charAt(idx);
+                idx++;
+                setTimeout(type, 200);
             }
         }
         window.onload = type;

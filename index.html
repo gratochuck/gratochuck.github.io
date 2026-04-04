@@ -3,23 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gratochuck GitHub Pages</title>
-    <style>
-        body {
-            background-color: #1a1a1a; /* bg-gray-950 */
-            color: #f0f0f0; /* Light gray text */
-        }
-        a {
-            color: #4fc3f7; /* Light blue for links */
-        }
-        h1, h2, h3, h4, h5, h6 {
-            color: #ffffff; /* White text for headings */
-        }
-    </style>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <h1>Welcome to Gratochuck's GitHub Pages</h1>
-    <p>This is an example of a dark themed webpage with enhanced contrast for better readability.</p>
-    <p><a href="#">Read more...</a></p>
+<body class="bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950 text-white">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#bio">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="bio">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Your introduction content goes here.</p>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Skill 1</li>
+                <li>Skill 2</li>
+                <li>Skill 3</li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div>
+                <h3>Project 1</h3>
+                <p>Project 1 description goes here.</p>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View Project</button>
+            </div>
+            <div>
+                <h3>Project 2</h3>
+                <p>Project 2 description goes here.</p>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View Project</button>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 Your Name. All rights reserved.</p>
+    </footer>
 </body>
 </html>

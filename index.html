@@ -3,61 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio | gratochuck</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0;
+            scroll-behavior: smooth;
+        }
+
+        /* The Typing Effect Animation */
+        .typing-text::after {
+            content: '|';
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* Custom Glassmorphism Blur */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px border rgba(255, 255, 255, 0.1);
+        }
+    </style>
 </head>
-<body class="bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950 text-white">
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#bio">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="bio">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Your introduction content goes here.</p>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Skill 1</li>
-                <li>Skill 2</li>
-                <li>Skill 3</li>
-            </ul>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <div>
-                <h3>Project 1</h3>
-                <p>Project 1 description goes here.</p>
-                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View Project</button>
+<body>
+
+    <nav class="fixed top-0 w-full z-50 border-b border-white/10 bg-[#0a0a0a]/70 backdrop-blur-lg">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-slate-400 bg-clip-text text-transparent italic">
+                gratochuck
+            </span>
+            <div class="hidden md:flex space-x-8 text-sm font-medium items-center">
+                <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+                <a href="mailto:your-email@example.com" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] font-bold">
+                    Get in Touch
+                </a>
             </div>
-            <div>
-                <h3>Project 2</h3>
-                <p>Project 2 description goes here.</p>
-                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View Project</button>
+        </div>
+    </nav>
+
+    <section class="pt-40 pb-20 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <p class="text-blue-500 font-mono mb-4 tracking-widest uppercase text-sm font-bold">// Welcome to my terminal</p>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-white">
+                I'm <span id="typing-element" class="text-blue-400 typing-text"></span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Freelance Web Developer specializing in <span class="text-slate-200">Modern UI/UX</span>, 
+                <span class="text-slate-200">Python Automation</span>, and scalable web solutions.
+            </p>
+            <div class="flex justify-center gap-6">
+                <a href="#projects" class="text-slate-300 hover:text-white transition-all flex items-center gap-2">
+                    View My Work <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
             </div>
-        </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Send Message</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>© 2026 Your Name. All rights reserved.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col items-center mb-16">
+                <h3 class="text-3xl font-bold mb-2">Technical Stack</h3>
+                <div class="h-1 w-20 bg-blue-600 rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-3xl group hover:border-blue-500/40 transition-all duration-500 hover:-translate-y-2">
+                    <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 mb-6 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                        <i data-lucide="layout"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Frontend Dev</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Crafting responsive, high-performance interfaces using React, Tailwind CSS, and modern JavaScript.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-3xl group hover:border-blue-500/40 transition-all duration-500 hover:-translate-y-2">
+                    <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 mb-6 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                        <i data-lucide="database"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Backend & APIs</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Building robust server-side logic and integrating complex third-party APIs for seamless data flow.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-3xl group hover:border-blue-500/40 transition-all duration-500 hover:-translate-y-2">
+                    <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 mb-6 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Automation</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Developing custom Python scripts and trading bots with precision logic and real-time triggers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6 bg-[#0c0c0c]">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl font-bold mb-12">Featured Projects</h3>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="group relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-slate-600 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                    <div class="relative glass-card rounded-3xl overflow-hidden">
+                        <div class="h-64 bg-slate-900/50 flex items-center justify-center border-b border-white/5">
+                            <i data-lucide="trending-up" class="w-16 h-16 text-blue-500/20"></i>
+                        </div>
+                        <div class="p-8">
+                            <h4 class="text-2xl font-bold mb-2 text-white">Algorithm Trading Bot</h4>
+                            <p class="text-slate-400 mb-6 text-sm">High-frequency trading solution focused on RSI and Moving Average analysis.</p>
+                            <div class="flex items-center gap-4">
+                                <span class="text-xs font-mono text-blue-400 bg-blue-400/10 px-3 py-1 rounded-full border border-blue-400/20">Python</span>
+                                <span class="text-xs font-mono text-slate-400 bg-slate-400/10 px-3 py-1 rounded-full border border-slate-400/20">Deriv API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center">
+        <div class="flex justify-center gap-6 mb-6">
+            <a href="https://github.com/gratochuck" class="text-slate-500 hover:text-white transition-all"><i data-lucide="github"></i></a>
+            <a href="#" class="text-slate-500 hover:text-white transition-all"><i data-lucide="linkedin"></i></a>
+        </div>
+        <p class="text-slate-600 text-sm italic">© 2026 gratochuck | Designed for Performance</p>
     </footer>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Typing Effect Script
+        const name = "Shingi";
+        const element = document.getElementById('typing-element');
+        let index = 0;
+
+        function type() {
+            if (index < name.length) {
+                element.textContent += name.charAt(index);
+                index++;
+                setTimeout(type, 150);
+            }
+        }
+        window.onload = type;
+    </script>
 </body>
 </html>

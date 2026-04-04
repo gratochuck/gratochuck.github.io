@@ -8,42 +8,14 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
-        
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #050505;
-            color: #e2e8f0;
-            margin: 0;
-        }
-
-        /* High-Quality Fixed Background Layer */
-        .bg-fixed-img {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: linear-gradient(rgba(5, 5, 5, 0.88), rgba(5, 5, 5, 0.88)), 
-                              url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2000');
-            background-size: cover;
-            background-position: center;
-            z-index: -1;
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .typing-cursor::after {
-            content: '|';
-            animation: blink 0.8s infinite;
-            color: #60a5fa;
-        }
-
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050505; color: #e2e8f0; margin: 0; }
+        .bg-fixed-img { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(5, 5, 5, 0.9), rgba(5, 5, 5, 0.9)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; z-index: -1; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .typing-cursor::after { content: '|'; animation: blink 0.8s infinite; color: #60a5fa; }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        /* Simulation Terminal Styles */
+        #bot-console::-webkit-scrollbar { width: 4px; }
+        #bot-console::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
     </style>
 </head>
 <body class="antialiased">
@@ -53,102 +25,54 @@
     <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/60 backdrop-blur-xl">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
             <span class="text-lg md:text-xl font-extrabold text-blue-400 italic tracking-tighter">gratochuck</span>
-            
-            <div class="flex items-center gap-3">
-                <div class="hidden md:flex space-x-6 mr-4 text-sm font-medium text-slate-300">
-                    <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
-                    <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
-                </div>
-                <a href="mailto:shingi@example.com" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 md:px-6 rounded-full text-xs md:text-sm font-bold shadow-lg shadow-blue-900/40 transition-transform active:scale-95">
-                    Get in Touch
-                </a>
-            </div>
+            <a href="mailto:shingi@example.com" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 md:px-6 rounded-full text-xs md:text-sm font-bold transition-transform active:scale-95 shadow-lg shadow-blue-900/40">Get in Touch</a>
         </div>
     </nav>
 
     <section class="min-h-screen flex items-center justify-center px-6 text-center">
         <div class="max-w-4xl">
-            <p class="text-blue-500 font-mono text-[10px] md:text-xs tracking-[0.4em] mb-4 uppercase font-bold">// Freelance Web Dev & Programmer</p>
-            <h1 class="text-5xl md:text-8xl font-extrabold mb-6 text-white tracking-tighter leading-tight">
-                I'm <span id="type-target" class="typing-cursor text-blue-400"></span>
-            </h1>
-            <p class="text-base md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed px-4">
-                Building modern web experiences and technical automation tools from Qatar to the world.
-            </p>
-            <a href="#projects" class="inline-block glass-card px-8 py-4 rounded-2xl hover:bg-white/5 transition-all font-semibold border-white/20">
-                Explore My Work
-            </a>
-        </div>
-    </section>
-
-    <section id="skills" class="py-24 px-6 max-w-6xl mx-auto">
-        <h3 class="text-2xl md:text-3xl font-bold mb-12 text-center text-white">Core Expertise</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="glass-card p-8 rounded-3xl group">
-                <i data-lucide="layout" class="text-blue-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                <h4 class="text-xl font-bold mb-2">Web Design</h4>
-                <p class="text-slate-400 text-sm leading-relaxed font-light">Responsive, fast-loading sites using modern React, Tailwind, and GitHub Pages.</p>
-            </div>
-            <div class="glass-card p-8 rounded-3xl group">
-                <i data-lucide="terminal" class="text-blue-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                <h4 class="text-xl font-bold mb-2">Automation</h4>
-                <p class="text-slate-400 text-sm leading-relaxed font-light">Python scripts for data processing and custom-built automated trading bots.</p>
-            </div>
-            <div class="glass-card p-8 rounded-3xl group">
-                <i data-lucide="database" class="text-blue-400 mb-4 group-hover:scale-110 transition-transform"></i>
-                <h4 class="text-xl font-bold mb-2">Technical Systems</h4>
-                <p class="text-slate-400 text-sm leading-relaxed font-light">Integrating real-time market APIs and low-latency multiplayer game frameworks.</p>
-            </div>
+            <p class="text-blue-500 font-mono text-[10px] tracking-[0.4em] mb-4 uppercase font-bold">// Web Dev & Algorithm Programmer</p>
+            <h1 class="text-5xl md:text-8xl font-extrabold mb-6 text-white tracking-tighter italic">I'm <span id="type-target" class="typing-cursor text-blue-400"></span></h1>
+            <p class="text-base md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">Building modern web interfaces and automated technical solutions in Qatar.</p>
+            <a href="#projects" class="inline-block glass-card px-8 py-4 rounded-2xl hover:bg-white/5 transition-all font-semibold border-white/20">Explore Work</a>
         </div>
     </section>
 
     <section id="projects" class="py-24 px-6 bg-black/30">
         <div class="max-w-6xl mx-auto">
-            <h3 class="text-2xl md:text-3xl font-bold mb-12 text-white">Featured Work</h3>
+            <h3 class="text-2xl md:text-3xl font-bold mb-12 text-white text-center">Featured Work</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 
-                <div class="glass-card rounded-3xl overflow-hidden group hover:border-blue-500/50 transition-all duration-500 relative">
-                    
+                <div onclick="openBotModal()" class="glass-card rounded-3xl overflow-hidden group hover:border-blue-500/50 transition-all duration-500 relative cursor-pointer">
                     <div class="absolute top-4 right-4 flex items-center gap-2 px-3 py-1 bg-black/40 backdrop-blur-md rounded-full border border-green-500/30 z-10">
                         <span class="relative flex h-2 w-2">
                             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                             <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                         </span>
-                        <span class="text-[9px] font-bold text-green-400 uppercase tracking-widest">System Active</span>
+                        <span class="text-[9px] font-bold text-green-400 uppercase tracking-widest">Live Demo</span>
                     </div>
-
-                    <div class="h-52 bg-slate-900/50 flex flex-col items-center justify-center border-b border-white/5 relative overflow-hidden">
-                        <i data-lucide="trending-up" class="text-blue-500/10 w-24 h-24 absolute -right-4 -bottom-4 rotate-12"></i>
+                    <div class="h-52 bg-slate-900/50 flex flex-col items-center justify-center border-b border-white/5">
                         <i data-lucide="bot" class="text-blue-400 w-16 h-16 mb-2 group-hover:scale-110 transition-transform"></i>
-                        <span class="text-[10px] font-mono text-blue-300/60 uppercase tracking-[0.2em]">Automation</span>
+                        <span class="text-[10px] font-mono text-blue-300/40 uppercase tracking-[0.2em]">Click to Run Preview</span>
                     </div>
                     <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-3 text-white">Trading Bot Infrastructure</h4>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed font-light">
-                            High-frequency trading infrastructure utilizing <span class="text-blue-300">RSI</span> and <span class="text-blue-300">Moving Average</span> triggers.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-[10px] font-bold bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-400/20">Python</span>
-                            <span class="text-[10px] font-bold bg-white/5 text-slate-300 px-3 py-1 rounded-full border border-white/10">Deriv API</span>
+                        <h4 class="text-2xl font-bold mb-3 text-white">Algorithm Trading Bot</h4>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed font-light">Custom infrastructure utilizing <span class="text-blue-300">RSI & MA</span> triggers for Deriv API.</p>
+                        <div class="flex gap-2">
+                            <span class="text-[9px] font-bold bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20 uppercase">Python</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="glass-card rounded-3xl overflow-hidden group hover:border-blue-500/50 transition-all duration-500 relative">
-                    <div class="h-52 bg-slate-900/50 flex flex-col items-center justify-center border-b border-white/5 relative overflow-hidden">
-                        <i data-lucide="swords" class="text-blue-500/10 w-24 h-24 absolute -right-4 -bottom-4 rotate-12"></i>
+                <div class="glass-card rounded-3xl overflow-hidden group hover:border-blue-500/50 transition-all duration-500">
+                    <div class="h-52 bg-slate-900/50 flex flex-col items-center justify-center border-b border-white/5">
                         <i data-lucide="smartphone" class="text-blue-400 w-16 h-16 mb-2 group-hover:scale-110 transition-transform"></i>
-                        <span class="text-[10px] font-mono text-blue-300/60 uppercase tracking-[0.2em]">Game Dev</span>
+                        <span class="text-[10px] font-mono text-blue-300/40 uppercase tracking-[0.2em]">GameKit Matchmaking</span>
                     </div>
                     <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-3 text-white">TapDuel</h4>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed font-light">
-                            Competitive multiplayer reflex game using <span class="text-blue-300">GameKit</span> for real-time matchmaking and interaction.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-[10px] font-bold bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20">Swift</span>
-                            <span class="text-[10px] font-bold bg-white/5 text-slate-300 px-3 py-1 rounded-full border border-white/10">GameKit</span>
-                        </div>
+                        <h4 class="text-2xl font-bold mb-3 text-white">TapDuel Multiplayer</h4>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed font-light">Competitive reflex game built with Swift. Focused on low-latency interactions.</p>
+                        <div class="flex gap-2"><span class="text-[9px] font-bold bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20 uppercase">Swift</span></div>
                     </div>
                 </div>
 
@@ -156,33 +80,73 @@
         </div>
     </section>
 
-    <footer class="py-16 border-t border-white/5 text-center px-6">
-        <div class="flex justify-center gap-6 mb-8 text-slate-500">
-            <a href="https://github.com/gratochuck" class="hover:text-blue-400 transition-all scale-110"><i data-lucide="github"></i></a>
+    <div id="bot-modal" class="fixed inset-0 z-[100] flex items-center justify-center px-6 hidden bg-black/80 backdrop-blur-sm">
+        <div class="glass-card w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl">
+            <div class="bg-slate-900/80 p-4 border-b border-white/10 flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <span class="ml-4 text-xs font-mono text-slate-400 tracking-widest">deriv_bot_v3.py — logs</span>
+                </div>
+                <button onclick="closeBotModal()" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+            </div>
+            <div id="bot-console" class="p-6 h-80 overflow-y-auto font-mono text-[11px] md:text-xs leading-relaxed bg-black/40">
+                <p class="text-blue-400">[SYSTEM] Initializing Deriv API Connection...</p>
+                <p class="text-green-400">[SUCCESS] Connection established. Symbol: EUR/USD</p>
+                <p class="text-slate-500">[INFO] Waiting for RSI cross (30/70 thresholds)...</p>
+            </div>
         </div>
-        <p class="text-slate-600 text-[10px] tracking-[0.4em] uppercase font-bold">© 2026 gratochuck | Digital Portfolio</p>
+    </div>
+
+    <footer class="py-12 text-center text-slate-600 text-[10px] tracking-[0.4em] uppercase font-bold border-t border-white/5">
+        © 2026 gratochuck | Digital Portfolio
     </footer>
 
     <script>
-        // Start Icons
         lucide.createIcons();
-
-        // Typing Effect
         const nameText = "Shingi";
         const target = document.getElementById('type-target');
         let i = 0;
+        function type() { if (i < nameText.length) { target.textContent += nameText.charAt(i); i++; setTimeout(type, 180); } }
+        window.onload = () => { setTimeout(type, 500); };
 
-        function type() {
-            if (i < nameText.length) {
-                target.textContent += nameText.charAt(i);
-                i++;
-                setTimeout(type, 180);
-            }
+        // Bot Modal Logic
+        const modal = document.getElementById('bot-modal');
+        const console = document.getElementById('bot-console');
+        let simulationInterval;
+
+        function openBotModal() {
+            modal.classList.remove('hidden');
+            startSimulation();
         }
-        
-        window.onload = function() {
-            setTimeout(type, 500); // Slight delay for smoother feel
-        };
+
+        function closeBotModal() {
+            modal.classList.add('hidden');
+            clearInterval(simulationInterval);
+        }
+
+        function startSimulation() {
+            const logs = [
+                "<span class='text-slate-400'>[LOG] Fetching latest ticks... 1.0842</span>",
+                "<span class='text-slate-400'>[LOG] RSI Analysis: 42.5 (Neutral)</span>",
+                "<span class='text-blue-400'>[PROCESS] Monitoring Moving Average crossover...</span>",
+                "<span class='text-yellow-400'>[ALERT] RSI dropping below 35. Preparing trade...</span>",
+                "<span class='text-green-400 font-bold'>[TRADE] ORDER PLACED: CALL @ 1.0840</span>",
+                "<span class='text-slate-400'>[LOG] Waiting for contract expiry...</span>",
+                "<span class='text-green-400'>[RESULT] WIN: +0.85 USD</span>",
+                "<span class='text-slate-500'>------------------------------------</span>"
+            ];
+            let logIdx = 0;
+            simulationInterval = setInterval(() => {
+                const p = document.createElement('p');
+                p.innerHTML = logs[logIdx % logs.length];
+                p.className = "mb-1";
+                console.appendChild(p);
+                console.scrollTop = console.scrollHeight;
+                logIdx++;
+            }, 1200);
+        }
     </script>
 </body>
 </html>

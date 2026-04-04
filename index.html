@@ -9,8 +9,9 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050505; color: #e2e8f0; margin: 0; overflow-x: hidden; }
-        .bg-fixed-img { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(5, 5, 5, 0.92), rgba(5, 5, 5, 0.92)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; z-index: -1; }
-        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .bg-fixed-img { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(5, 5, 5, 0.94), rgba(5, 5, 5, 0.94)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; z-index: -1; }
+        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.4s ease; }
+        .glass-card:hover { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(96, 165, 250, 0.3); }
         .typing-cursor::after { content: '|'; animation: blink 0.8s infinite; color: #60a5fa; }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
     </style>
@@ -21,96 +22,132 @@
 
     <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/60 backdrop-blur-xl">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-            <span class="text-lg md:text-xl font-extrabold text-blue-400 italic tracking-tighter">gratochuck</span>
-            <a href="mailto:shingi@example.com" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full text-xs font-bold transition-transform active:scale-95 shadow-lg shadow-blue-900/40">Get in Touch</a>
+            <span class="text-lg font-extrabold text-blue-400 italic tracking-tighter">gratochuck</span>
+            <a href="mailto:shingi@example.com" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full text-xs font-bold transition-all active:scale-95 shadow-lg shadow-blue-900/40">Get in Touch</a>
         </div>
     </nav>
 
     <section class="min-h-screen flex items-center justify-center px-6 text-center">
         <div class="max-w-4xl">
-            <h1 class="text-5xl md:text-8xl font-extrabold mb-6 text-white tracking-tighter italic">I'm <span id="type-target" class="typing-cursor text-blue-400"></span></h1>
-            <p class="text-base md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto font-light leading-relaxed tracking-wide">High-performance Web Interfaces & Real-time Automated Systems.</p>
-            <a href="#projects" class="inline-block glass-card px-8 py-4 rounded-2xl hover:bg-white/5 transition-all font-semibold border-white/20 uppercase tracking-widest text-[10px]">Explore Work</a>
+            <p class="text-blue-500 font-mono text-[10px] tracking-[0.4em] mb-4 uppercase font-bold tracking-widest">// Qatar Based Developer</p>
+            <h1 class="text-6xl md:text-8xl font-extrabold mb-6 text-white tracking-tighter italic">I'm <span id="type-target" class="typing-cursor text-blue-400"></span></h1>
+            <p class="text-base md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto font-light leading-relaxed">Freelance Web Developer specializing in automation and high-performance interfaces.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#projects" class="glass-card px-8 py-4 rounded-2xl font-semibold uppercase tracking-widest text-[10px] text-blue-400">View Showcase</a>
+                <a href="#expertise" class="px-8 py-4 rounded-2xl font-semibold uppercase tracking-widest text-[10px] text-slate-500 hover:text-white transition-colors">My Expertise</a>
+            </div>
         </div>
     </section>
 
-    <section id="projects" class="py-24 px-6 bg-black/30">
+    <section id="expertise" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h3 class="text-3xl font-bold text-white tracking-tighter">Technical Arsenal</h3>
+            <p class="text-slate-500 text-sm mt-2">Tools and technologies I use to build scaleable solutions.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass-card p-10 rounded-[2rem] text-center">
+                <i data-lucide="layout" class="mx-auto text-blue-400 w-10 h-10 mb-6"></i>
+                <h4 class="text-xl font-bold mb-4 text-white">Frontend Dev</h4>
+                <p class="text-slate-400 text-sm leading-relaxed font-light">Crafting responsive, lightning-fast websites using <span class="text-blue-300">HTML5, Tailwind CSS,</span> and <span class="text-blue-300">JavaScript</span>.</p>
+            </div>
+            <div class="glass-card p-10 rounded-[2rem] text-center">
+                <i data-lucide="terminal" class="mx-auto text-blue-400 w-10 h-10 mb-6"></i>
+                <h4 class="text-xl font-bold mb-4 text-white">Backend Logic</h4>
+                <p class="text-slate-400 text-sm leading-relaxed font-light">Building robust automation scripts and trading infrastructures using <span class="text-blue-300">Python</span> and <span class="text-blue-300">API integrations</span>.</p>
+            </div>
+            <div class="glass-card p-10 rounded-[2rem] text-center">
+                <i data-lucide="smartphone" class="mx-auto text-blue-400 w-10 h-10 mb-6"></i>
+                <h4 class="text-xl font-bold mb-4 text-white">App Ecosystems</h4>
+                <p class="text-slate-400 text-sm leading-relaxed font-light">Developing native mobile experiences with <span class="text-blue-300">Swift</span> and managing real-time data via <span class="text-blue-300">GameKit</span>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6 bg-black/40 border-y border-white/5">
         <div class="max-w-6xl mx-auto">
-            <h3 class="text-2xl md:text-3xl font-bold mb-16 text-white text-center tracking-tighter">Interactive Showcase</h3>
+            <h3 class="text-3xl font-bold mb-16 text-white text-center tracking-tighter italic">Interactive Projects</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 
-                <div onclick="openBotModal()" class="glass-card rounded-3xl overflow-hidden group hover:border-blue-500/50 transition-all duration-500 relative cursor-pointer">
-                    <div class="absolute top-4 right-4 flex items-center gap-2 px-3 py-1 bg-black/40 backdrop-blur-md rounded-full border border-green-500/30 z-10">
-                        <span class="relative flex h-2 w-2">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                        </span>
-                        <span class="text-[9px] font-bold text-green-400 uppercase tracking-widest">System Active</span>
+                <div onclick="openBotModal()" class="glass-card rounded-[2.5rem] overflow-hidden relative cursor-pointer group">
+                    <div class="absolute top-6 right-6 flex items-center gap-2 px-3 py-1 bg-black/50 backdrop-blur-md rounded-full border border-green-500/30 z-10">
+                        <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span></span>
+                        <span class="text-[8px] font-bold text-green-400 uppercase tracking-widest">Active System</span>
                     </div>
-
-                    <div class="h-52 bg-slate-900/50 flex flex-col items-center justify-center border-b border-white/5">
-                        <i data-lucide="bot" class="text-blue-400 w-12 h-12 mb-4 group-hover:scale-110 transition-transform"></i>
-                        <span class="text-[10px] font-mono text-blue-300/40 uppercase tracking-[0.2em]">Trading Bot Logic</span>
+                    <div class="h-60 bg-slate-900/40 flex flex-col items-center justify-center border-b border-white/5">
+                        <i data-lucide="bot" class="text-blue-400 w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-500"></i>
+                        <span class="text-[9px] font-mono text-blue-300/30 uppercase tracking-[0.3em]">Deriv API Logic</span>
                     </div>
-                    <div class="p-8"><h4 class="text-xl font-bold mb-2 text-white italic">Algorithm Trading</h4><p class="text-slate-400 text-sm font-light">Python execution for Deriv API.</p></div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-2 text-white italic tracking-tighter">Algorithm Trading Bot</h4>
+                        <p class="text-slate-400 text-sm font-light">Click to view real-time RSI and Moving Average execution logs.</p>
+                    </div>
                 </div>
 
-                <div onclick="openDuelModal()" class="glass-card rounded-3xl overflow-hidden group hover:border-blue-500/50 transition-all duration-500 relative cursor-pointer">
-                    <div class="absolute top-4 right-4 flex items-center gap-2 px-3 py-1 bg-black/40 backdrop-blur-md rounded-full border border-blue-500/30 z-10">
-                        <span class="text-[9px] font-bold text-blue-400 uppercase tracking-widest">Multiplayer Duel</span>
+                <div onclick="openDuelModal()" class="glass-card rounded-[2.5rem] overflow-hidden relative cursor-pointer group">
+                    <div class="absolute top-6 right-6 flex items-center gap-2 px-3 py-1 bg-black/50 backdrop-blur-md rounded-full border border-blue-500/30 z-10">
+                        <span class="text-[8px] font-bold text-blue-400 uppercase tracking-widest">Multiplayer Live</span>
                     </div>
-                    <div class="h-52 bg-slate-900/50 flex flex-col items-center justify-center border-b border-white/5">
-                        <i data-lucide="swords" class="text-blue-400 w-12 h-12 mb-4 group-hover:scale-110 transition-transform"></i>
-                        <span class="text-[10px] font-mono text-blue-300/40 uppercase tracking-[0.2em]">Mobile Game Dev</span>
+                    <div class="h-60 bg-slate-900/40 flex flex-col items-center justify-center border-b border-white/5">
+                        <i data-lucide="swords" class="text-blue-400 w-12 h-12 mb-4 group-hover:scale-110 transition-transform duration-500"></i>
+                        <span class="text-[9px] font-mono text-blue-300/30 uppercase tracking-[0.3em]">GameKit Simulation</span>
                     </div>
-                    <div class="p-8"><h4 class="text-xl font-bold mb-2 text-white italic">TapDuel Multiplayer</h4><p class="text-slate-400 text-sm font-light">Real-time PvP with GameKit.</p></div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-2 text-white italic tracking-tighter">TapDuel PvP</h4>
+                        <p class="text-slate-400 text-sm font-light">Experience the real-time matchmaking and tapping battle simulation.</p>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <div id="bot-modal" class="fixed inset-0 z-[100] flex items-center justify-center px-6 hidden bg-black/90 backdrop-blur-md">
+    <div id="bot-modal" class="fixed inset-0 z-[100] flex items-center justify-center px-6 hidden bg-black/95 backdrop-blur-md">
         <div class="glass-card w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl">
-            <div class="bg-slate-900/80 p-4 border-b border-white/10 flex justify-between">
-                <span class="text-[10px] font-mono text-slate-400 tracking-widest">deriv_v3_automated.py — system_logs</span>
-                <button onclick="closeModals()"><i data-lucide="x" class="w-5 h-5 text-slate-500 hover:text-white"></i></button>
+            <div class="bg-slate-900/90 p-4 border-b border-white/10 flex justify-between">
+                <span class="text-[10px] font-mono text-slate-400 tracking-widest uppercase">system_log.py</span>
+                <button onclick="closeModals()"><i data-lucide="x" class="w-5 h-5 text-slate-500 hover:text-white transition-colors"></i></button>
             </div>
-            <div id="bot-console" class="p-6 h-64 overflow-y-auto font-mono text-xs bg-black/40"></div>
+            <div id="bot-console" class="p-6 h-64 overflow-y-auto font-mono text-xs bg-black/40 leading-relaxed text-blue-100"></div>
         </div>
     </div>
 
-    <div id="duel-modal" class="fixed inset-0 z-[100] flex items-center justify-center px-6 hidden bg-black/90 backdrop-blur-md">
-        <div class="glass-card w-full max-w-sm rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white/10 p-8 text-center relative">
-            <button onclick="closeModals()" class="absolute top-6 right-6"><i data-lucide="x" class="w-5 h-5 text-slate-500"></i></button>
-            
+    <div id="duel-modal" class="fixed inset-0 z-[100] flex items-center justify-center px-6 hidden bg-black/95 backdrop-blur-md">
+        <div class="glass-card w-full max-w-sm rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white/10 p-10 text-center relative">
+            <button onclick="closeModals()" class="absolute top-8 right-8"><i data-lucide="x" class="w-5 h-5 text-slate-500"></i></button>
             <div id="search-phase">
-                <div class="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-6 mx-auto"></div>
-                <h5 class="text-xl font-bold text-white mb-2 italic">Searching for opponent...</h5>
-                <p class="text-slate-500 text-[10px] uppercase tracking-widest">GameKit Lobby</p>
+                <div class="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-8 mx-auto"></div>
+                <h5 class="text-2xl font-bold text-white mb-2 italic">Finding Rival...</h5>
+                <p class="text-slate-500 text-[9px] uppercase tracking-[0.3em]">Secure Lobby Service</p>
             </div>
-
             <div id="found-phase" class="hidden">
-                <div class="flex items-center justify-center gap-4 mb-8">
-                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center font-bold text-2xl">You</div>
-                    <span class="text-red-500 font-black italic">VS</span>
-                    <div class="w-16 h-16 bg-slate-800 rounded-full flex items-center justify-center font-bold text-xs italic">CPU_88</div>
+                <div class="flex items-center justify-center gap-6 mb-10">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center font-bold text-xl shadow-lg shadow-blue-500/20">Me</div>
+                    <span class="text-red-500 font-black italic text-xl">VS</span>
+                    <div class="w-16 h-16 bg-slate-800 rounded-full flex items-center justify-center font-bold text-[10px] italic">CPU_99</div>
                 </div>
-                <button onclick="startBattle()" class="w-full bg-blue-600 py-4 rounded-2xl font-bold uppercase tracking-widest text-[10px] hover:bg-blue-500 transition-all">Start GameKit Match</button>
+                <button onclick="startBattle()" class="w-full bg-blue-600 py-4 rounded-2xl font-bold uppercase tracking-[0.2em] text-[10px] hover:bg-blue-500 shadow-xl shadow-blue-600/10">Start Match</button>
             </div>
-
             <div id="battle-phase" class="hidden">
-                <div class="flex justify-between mb-8 px-4">
-                    <div class="text-left"><p class="text-[10px] text-blue-400 uppercase mb-1">Score</p><p class="text-4xl font-black" id="my-score">0</p></div>
-                    <div class="text-right"><p class="text-[10px] text-slate-500 uppercase mb-1">Enemy</p><p class="text-4xl font-black text-slate-600" id="cpu-score">0</p></div>
+                <div class="flex justify-between mb-10 px-2">
+                    <div class="text-left"><p class="text-[8px] text-blue-400 uppercase tracking-widest mb-2">My Taps</p><p class="text-5xl font-black italic" id="my-score">0</p></div>
+                    <div class="text-right"><p class="text-[8px] text-slate-500 uppercase tracking-widest mb-2">Enemy</p><p class="text-5xl font-black text-slate-700 italic" id="cpu-score">0</p></div>
                 </div>
-                <div class="w-full bg-slate-800 h-2 rounded-full mb-4 overflow-hidden">
-                    <div id="score-bar" class="w-1/2 h-full bg-blue-500 transition-all duration-100"></div>
-                </div>
-                <p class="text-[10px] text-blue-400 animate-pulse tracking-widest uppercase">Transmitting Taps...</p>
+                <div class="w-full bg-slate-900 h-1.5 rounded-full mb-4 overflow-hidden"><div id="score-bar" class="w-1/2 h-full bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-100"></div></div>
+                <p class="text-[9px] text-blue-400 animate-pulse tracking-[0.4em] uppercase">Data Streaming...</p>
             </div>
         </div>
     </div>
+
+    <footer class="py-24 text-center border-t border-white/5 bg-black/20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white tracking-tighter italic">Let's build the future.</h2>
+            <div class="flex justify-center gap-8 mb-12">
+                <a href="https://github.com/gratochuck" class="text-slate-500 hover:text-white transition-all transform hover:scale-110"><i data-lucide="github" class="w-6 h-6"></i></a>
+                <a href="mailto:shingi@example.com" class="text-slate-500 hover:text-white transition-all transform hover:scale-110"><i data-lucide="mail" class="w-6 h-6"></i></a>
+            </div>
+            <p class="text-slate-600 text-[10px] tracking-[0.6em] uppercase font-bold">© 2026 gratochuck | Digital Experience Studio</p>
+        </div>
+    </footer>
 
     <script>
         lucide.createIcons();
@@ -129,40 +166,32 @@
             activeIntervals = [];
         }
 
-        // BOT LOGIC (SYNCED WITH YOUR RSI/MA INTERESTS)
         function openBotModal() {
             document.getElementById('bot-modal').classList.remove('hidden');
             const consoleEl = document.getElementById('bot-console');
-            consoleEl.innerHTML = "<p class='text-blue-500 mb-2'>[BOOT] Initializing Python 3.10 Runtime...</p>";
-            
+            consoleEl.innerHTML = "";
             const logs = [
-                "<span class='text-slate-400'>[LOG] Fetching AED/CNY OTC Ticks...</span>",
-                "<span class='text-blue-400'>[ANL] RSI Calculation: 62.4 (Approaching Overbought)</span>",
-                "<span class='text-slate-500'>[LOG] MA(20) at 1.0924 / MA(50) at 1.0920</span>",
-                "<span class='text-yellow-400'>[WRN] Monitoring for RSI Cross below 30...</span>",
-                "<span class='text-green-500 font-bold'>[TRD] TRADE EXECUTED: CALL (Stake: 0.5)</span>",
+                "<span class='text-blue-400'>[SYS] Connecting to Deriv AED/CNY OTC...</span>",
+                "<span class='text-slate-400'>[LOG] RSI: 58.4 | EMA(20): 1.092 | EMA(50): 1.091</span>",
+                "<span class='text-yellow-400'>[WAIT] Monitoring for RSI Divergence...</span>",
+                "<span class='text-green-500 font-bold'>[TRD] BUY EXECUTED (Stake: 0.5)</span>",
                 "<span class='text-blue-300'>[RES] Contract Successful: Profit +$0.43</span>",
                 "<span class='text-slate-600'>----------------------------------------</span>"
             ];
-            
             let idx = 0;
             activeIntervals.push(setInterval(() => {
                 const p = document.createElement('p');
-                p.className = "mb-1";
-                p.innerHTML = logs[idx % logs.length];
-                consoleEl.appendChild(p);
-                consoleEl.scrollTop = consoleEl.scrollHeight;
+                p.className = "mb-1"; p.innerHTML = logs[idx % logs.length];
+                consoleEl.appendChild(p); consoleEl.scrollTop = consoleEl.scrollHeight;
                 idx++;
-            }, 900));
+            }, 1000));
         }
 
-        // TAPDUEL LOGIC
         function openDuelModal() {
             document.getElementById('duel-modal').classList.remove('hidden');
             document.getElementById('search-phase').classList.remove('hidden');
             document.getElementById('found-phase').classList.add('hidden');
             document.getElementById('battle-phase').classList.add('hidden');
-
             setTimeout(() => {
                 document.getElementById('search-phase').classList.add('hidden');
                 document.getElementById('found-phase').classList.remove('hidden');
@@ -172,21 +201,15 @@
         function startBattle() {
             document.getElementById('found-phase').classList.add('hidden');
             document.getElementById('battle-phase').classList.remove('hidden');
-            
             let mS = 0; let cS = 0;
-            const mE = document.getElementById('my-score');
-            const cE = document.getElementById('cpu-score');
-            const sB = document.getElementById('score-bar');
-
             activeIntervals.push(setInterval(() => {
                 mS += Math.floor(Math.random() * 5) + 1;
                 cS += Math.floor(Math.random() * 5) + 1;
-                mE.innerText = mS;
-                cE.innerText = cS;
-                sB.style.width = (mS / (mS + cS)) * 100 + "%";
-                
+                document.getElementById('my-score').innerText = mS;
+                document.getElementById('cpu-score').innerText = cS;
+                document.getElementById('score-bar').style.width = (mS / (mS + cS)) * 100 + "%";
                 if(mS > 150 || cS > 150) {
-                    alert(mS > cS ? "GAME OVER: Match Won!" : "GAME OVER: Opponent Wins.");
+                    alert(mS > cS ? "VICTORY: GameKit Match Sync Complete!" : "DEFEAT: Retrying Lobby Connection...");
                     closeModals();
                 }
             }, 120));

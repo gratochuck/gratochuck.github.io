@@ -33,34 +33,41 @@
             <h1 class="text-6xl md:text-8xl font-extrabold mb-6 text-white tracking-tighter italic leading-none">I'm <span id="type-target" class="typing-cursor text-blue-400"></span></h1>
             <p class="text-base md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">Full-Stack Developer focused on automation, real-time gaming, and digital brand scaling.</p>
             <div class="flex gap-4 justify-center">
-                <a href="#projects" class="glass-card px-10 py-5 rounded-2xl font-bold uppercase tracking-widest text-[10px] text-blue-400 border-blue-500/20">View Showcase</a>
+                <a href="#projects" class="glass-card px-10 py-5 rounded-2xl font-bold uppercase tracking-widest text-[10px] text-blue-400 border-blue-500/20">View Project Vault</a>
             </div>
         </div>
     </section>
 
     <section id="expertise" class="py-24 px-6 max-w-6xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="glass-card p-10 rounded-[2.5rem]">
-                <i data-lucide="layout" class="text-blue-400 w-8 h-8 mb-6"></i>
+            
+            <div class="glass-card p-10 rounded-[2.5rem] group">
+                <i data-lucide="layout" class="text-blue-400 w-8 h-8 mb-6 group-hover:rotate-12 transition-transform"></i>
                 <h4 class="text-lg font-bold mb-3 text-white italic">Interface Design</h4>
-                <p class="text-slate-500 text-xs leading-relaxed">Modern web architectures using Tailwind and Responsive JS.</p>
+                <p class="text-slate-500 text-xs leading-relaxed mb-6">High-fidelity frontends with 99+ Performance scores and smooth UX.</p>
+                <button onclick="showTechSpecs('interface')" class="text-[9px] font-bold text-blue-400 uppercase tracking-widest border-b border-blue-400/20 pb-1 hover:border-blue-400 transition-all">View UI Specs →</button>
             </div>
-            <div class="glass-card p-10 rounded-[2.5rem]">
-                <i data-lucide="terminal" class="text-blue-400 w-8 h-8 mb-6"></i>
+
+            <div class="glass-card p-10 rounded-[2.5rem] group">
+                <i data-lucide="terminal" class="text-blue-400 w-8 h-8 mb-6 group-hover:scale-110 transition-transform"></i>
                 <h4 class="text-lg font-bold mb-3 text-white italic">Logic Automation</h4>
-                <p class="text-slate-500 text-xs leading-relaxed">Python bots for financial analysis and content scheduling.</p>
+                <p class="text-slate-500 text-xs leading-relaxed mb-6">Python pipelines for financial analysis and automated content execution.</p>
+                <button onclick="showTechSpecs('automation')" class="text-[9px] font-bold text-blue-400 uppercase tracking-widest border-b border-blue-400/20 pb-1 hover:border-blue-400 transition-all">View Logic Flow →</button>
             </div>
-            <div class="glass-card p-10 rounded-[2.5rem]">
-                <i data-lucide="zap" class="text-blue-400 w-8 h-8 mb-6"></i>
+
+            <div class="glass-card p-10 rounded-[2.5rem] group">
+                <i data-lucide="zap" class="text-blue-400 w-8 h-8 mb-6 group-hover:animate-pulse"></i>
                 <h4 class="text-lg font-bold mb-3 text-white italic">Real-Time PvP</h4>
-                <p class="text-slate-500 text-xs leading-relaxed">Low-latency mobile experiences using Swift and GameKit.</p>
+                <p class="text-slate-500 text-xs leading-relaxed mb-6">Low-latency engineering for multiplayer state synchronization.</p>
+                <button onclick="showTechSpecs('pvp')" class="text-[9px] font-bold text-blue-400 uppercase tracking-widest border-b border-blue-400/20 pb-1 hover:border-blue-400 transition-all">View Sync Specs →</button>
             </div>
+
         </div>
     </section>
 
     <section id="projects" class="py-24 px-6 bg-black/40 border-y border-white/5">
         <div class="max-w-6xl mx-auto">
-            <h3 class="text-3xl font-bold mb-16 text-white text-center tracking-tighter italic">Interactive Showcase</h3>
+            <h3 class="text-3xl font-bold mb-16 text-white text-center tracking-tighter italic">Interactive Projects</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 
                 <div onclick="openBotModal()" class="glass-card rounded-[2.5rem] overflow-hidden relative cursor-pointer group">
@@ -69,10 +76,10 @@
                         <span class="text-[8px] font-bold text-green-400 uppercase tracking-widest">Live System</span>
                     </div>
                     <div class="h-56 bg-slate-900/40 flex flex-col items-center justify-center border-b border-white/5">
-                        <i data-lucide="bot" class="text-blue-400 w-12 h-12 mb-4 group-hover:scale-110 transition-transform"></i>
-                        <span class="text-[9px] font-mono text-blue-300/30 uppercase tracking-[0.3em]">Trading Bot</span>
+                        <i data-lucide="bot" class="text-blue-400 w-12 h-12 mb-4"></i>
+                        <span class="text-[9px] font-mono text-blue-300/30 uppercase">Trading Bot</span>
                     </div>
-                    <div class="p-8"><h4 class="text-xl font-bold mb-2 text-white italic">Algorithmic Trading</h4><p class="text-slate-400 text-sm font-light">Python automation for Deriv API.</p></div>
+                    <div class="p-8"><h4 class="text-xl font-bold mb-2 text-white italic">Algorithmic Trading</h4><p class="text-slate-400 text-sm font-light">Custom RSI/MA Logic for Deriv API.</p></div>
                 </div>
 
                 <div onclick="openDuelModal()" class="glass-card rounded-[2.5rem] overflow-hidden relative cursor-pointer group">
@@ -80,32 +87,32 @@
                         <span class="text-[8px] font-bold text-blue-400 uppercase tracking-widest">Multiplayer</span>
                     </div>
                     <div class="h-56 bg-slate-900/40 flex flex-col items-center justify-center border-b border-white/5">
-                        <i data-lucide="swords" class="text-blue-400 w-12 h-12 mb-4 group-hover:scale-110 transition-transform"></i>
-                        <span class="text-[9px] font-mono text-blue-300/30 uppercase tracking-[0.3em]">Mobile PvP</span>
+                        <i data-lucide="swords" class="text-blue-400 w-12 h-12 mb-4"></i>
+                        <span class="text-[9px] font-mono text-blue-300/30 uppercase">Mobile PvP</span>
                     </div>
-                    <div class="p-8"><h4 class="text-xl font-bold mb-2 text-white italic">TapDuel Engine</h4><p class="text-slate-400 text-sm font-light">GameKit real-time state synchronization.</p></div>
+                    <div class="p-8"><h4 class="text-xl font-bold mb-2 text-white italic">TapDuel PvP</h4><p class="text-slate-400 text-sm font-light">GameKit state-sync simulation.</p></div>
                 </div>
 
                 <div onclick="openMarketingModal()" class="glass-card rounded-[2.5rem] overflow-hidden relative cursor-pointer group">
                     <div class="absolute top-6 right-6 px-3 py-1 bg-black/50 backdrop-blur-md rounded-full border border-purple-500/30 z-10">
-                        <span class="text-[8px] font-bold text-purple-400 uppercase tracking-widest">Content AI</span>
+                        <span class="text-[8px] font-bold text-purple-400 uppercase tracking-widest">Automation</span>
                     </div>
                     <div class="h-56 bg-slate-900/40 flex flex-col items-center justify-center border-b border-white/5">
-                        <i data-lucide="video" class="text-blue-400 w-12 h-12 mb-4 group-hover:scale-110 transition-transform"></i>
-                        <span class="text-[9px] font-mono text-blue-300/30 uppercase tracking-[0.3em]">Automation</span>
+                        <i data-lucide="video" class="text-blue-400 w-12 h-12 mb-4"></i>
+                        <span class="text-[9px] font-mono text-blue-300/30 uppercase">Content AI</span>
                     </div>
-                    <div class="p-8"><h4 class="text-xl font-bold mb-2 text-white italic">Faceless Engine</h4><p class="text-slate-400 text-sm font-light">Automated brand growth through AI content.</p></div>
+                    <div class="p-8"><h4 class="text-xl font-bold mb-2 text-white italic">Faceless Engine</h4><p class="text-slate-400 text-sm font-light">Automated Instagram content scaling.</p></div>
                 </div>
 
                 <div onclick="openCarModal()" class="glass-card rounded-[2.5rem] overflow-hidden relative cursor-pointer group">
                     <div class="absolute top-6 right-6 px-3 py-1 bg-black/50 backdrop-blur-md rounded-full border border-orange-500/30 z-10">
-                        <span class="text-[8px] font-bold text-orange-400 uppercase tracking-widest">Luxury UI</span>
+                        <span class="text-[8px] font-bold text-orange-400 uppercase tracking-widest">Showcase</span>
                     </div>
                     <div class="h-56 bg-slate-900/40 flex flex-col items-center justify-center border-b border-white/5">
-                        <i data-lucide="wrench" class="text-blue-400 w-12 h-12 mb-4 group-hover:scale-110 transition-transform"></i>
-                        <span class="text-[9px] font-mono text-blue-300/30 uppercase tracking-[0.3em]">Showcase Hub</span>
+                        <i data-lucide="wrench" class="text-blue-400 w-12 h-12 mb-4"></i>
+                        <span class="text-[9px] font-mono text-blue-300/30 uppercase">Project Hub</span>
                     </div>
-                    <div class="p-8"><h4 class="text-xl font-bold mb-2 text-white italic">Restoration Portfolio</h4><p class="text-slate-400 text-sm font-light">Premium management for automotive restoration.</p></div>
+                    <div class="p-8"><h4 class="text-xl font-bold mb-2 text-white italic">Classic Restoration</h4><p class="text-slate-400 text-sm font-light">Luxury automotive project tracker.</p></div>
                 </div>
 
             </div>
@@ -113,17 +120,13 @@
     </section>
 
     <div id="modal-container" class="fixed inset-0 z-[100] flex items-center justify-center px-6 hidden bg-black/95 backdrop-blur-md">
-        <div class="glass-card w-full max-w-2xl rounded-[3rem] overflow-hidden shadow-2xl relative p-10 border-white/10">
-            <button onclick="closeModals()" class="absolute top-8 right-8 text-slate-500 hover:text-white transition-colors"><i data-lucide="x"></i></button>
+        <div class="glass-card w-full max-w-2xl rounded-[3rem] overflow-hidden shadow-2xl relative p-10">
+            <button onclick="closeModals()" class="absolute top-8 right-8 text-slate-500 hover:text-white"><i data-lucide="x"></i></button>
             <div id="modal-body"></div>
         </div>
     </div>
 
     <footer class="py-20 text-center border-t border-white/5">
-        <div class="flex justify-center gap-6 mb-8">
-            <a href="https://github.com/gratochuck" class="text-slate-500 hover:text-white transition-all"><i data-lucide="github"></i></a>
-            <a href="mailto:shingi@example.com" class="text-slate-500 hover:text-white transition-all"><i data-lucide="mail"></i></a>
-        </div>
         <p class="text-slate-600 text-[10px] tracking-[0.6em] uppercase font-bold">© 2026 gratochuck | Digital Experience Studio</p>
     </footer>
 
@@ -145,12 +148,40 @@
             intervals = [];
         }
 
-        // 1. Trading Bot Simulation
+        // TECH SPECS LOGIC
+        function showTechSpecs(type) {
+            container.classList.remove('hidden');
+            if(type === 'interface') {
+                body.innerHTML = `<h5 class="text-blue-400 font-mono text-[10px] uppercase mb-6 tracking-widest">UI Architecture</h5>
+                    <ul class="space-y-4 text-slate-300 text-sm">
+                        <li class="flex gap-3"><i data-lucide="check-circle" class="text-blue-400 w-4 h-4"></i> Mobile-First Responsive Grid</li>
+                        <li class="flex gap-3"><i data-lucide="check-circle" class="text-blue-400 w-4 h-4"></i> 60FPS CSS Performance</li>
+                        <li class="flex gap-3"><i data-lucide="check-circle" class="text-blue-400 w-4 h-4"></i> Modern Glassmorphism Styling</li>
+                    </ul>`;
+            } else if(type === 'automation') {
+                body.innerHTML = `<h5 class="text-blue-400 font-mono text-[10px] uppercase mb-6 tracking-widest">Automation Pipeline</h5>
+                    <ul class="space-y-4 text-slate-300 text-sm">
+                        <li class="flex gap-3"><i data-lucide="cpu" class="text-blue-400 w-4 h-4"></i> RSI/MA Signal Analysis</li>
+                        <li class="flex gap-3"><i data-lucide="cpu" class="text-blue-400 w-4 h-4"></i> Automated API Webhooks</li>
+                        <li class="flex gap-3"><i data-lucide="cpu" class="text-blue-400 w-4 h-4"></i> Error-Handling & Logs</li>
+                    </ul>`;
+            } else if(type === 'pvp') {
+                body.innerHTML = `<h5 class="text-blue-400 font-mono text-[10px] uppercase mb-6 tracking-widest">Sync Engineering</h5>
+                    <ul class="space-y-4 text-slate-300 text-sm">
+                        <li class="flex gap-3"><i data-lucide="zap" class="text-blue-400 w-4 h-4"></i> Low-Latency WebSockets</li>
+                        <li class="flex gap-3"><i data-lucide="zap" class="text-blue-400 w-4 h-4"></i> Real-time Conflict Resolution</li>
+                        <li class="flex gap-3"><i data-lucide="zap" class="text-blue-400 w-4 h-4"></i> GameKit Session Management</li>
+                    </ul>`;
+            }
+            lucide.createIcons();
+        }
+
+        // PROJECT MODALS
         function openBotModal() {
             container.classList.remove('hidden');
-            body.innerHTML = `<h5 class="text-blue-400 font-mono text-[10px] uppercase tracking-widest mb-6">Execution Log // AED-CNY OTC</h5><div id="logs" class="h-64 overflow-y-auto font-mono text-[11px] leading-relaxed text-slate-300"></div>`;
+            body.innerHTML = `<h5 class="text-blue-400 font-mono text-[10px] uppercase mb-6">Trading_log.py</h5><div id="logs" class="h-64 overflow-y-auto font-mono text-[11px] text-slate-400"></div>`;
             const logs = document.getElementById('logs');
-            const data = ["[SYS] Connected", "[ANL] RSI: 42.5", "[LOG] MA Cross Detected", "[TRD] CALL Stake: 0.5", "[RES] Success: +$0.43"];
+            const data = ["[SYS] Connected", "[ANL] RSI: 42.5", "[TRD] CALL Stake: 0.5", "[RES] Success: +$0.43"];
             let dIdx = 0;
             intervals.push(setInterval(() => {
                 logs.innerHTML += `<p class="mb-1">${data[dIdx % data.length]}</p>`;
@@ -158,48 +189,40 @@
             }, 900));
         }
 
-        // 2. TapDuel Simulation
         function openDuelModal() {
             container.classList.remove('hidden');
-            body.innerHTML = `<div class="text-center py-10"><div class="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-6"></div><p class="text-white italic">Finding GameKit Opponent...</p></div>`;
+            body.innerHTML = `<div class="text-center py-10"><div class="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-6"></div><p class="text-white">Lobbying...</p></div>`;
             setTimeout(() => {
-                body.innerHTML = `<div class="flex justify-between items-center mb-10 px-4"><div class="text-left"><p class="text-[10px] text-blue-400 uppercase tracking-widest mb-2">You</p><p class="text-5xl font-black italic" id="mS">0</p></div><div class="text-right"><p class="text-[10px] text-slate-600 uppercase tracking-widest mb-2">Opponent</p><p class="text-5xl font-black text-slate-800 italic" id="cS">0</p></div></div><div class="w-full bg-slate-900 h-2 rounded-full mb-6 overflow-hidden"><div id="sB" class="w-1/2 h-full bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all"></div></div><p class="text-[9px] text-blue-400 animate-pulse tracking-[0.3em] uppercase text-center">Syncing State...</p>`;
+                body.innerHTML = `<div class="flex justify-between items-center mb-10"><p class="text-5xl font-black italic" id="mS">0</p><p class="text-5xl font-black text-slate-800 italic" id="cS">0</p></div><div class="w-full bg-slate-900 h-2 rounded-full mb-6 overflow-hidden"><div id="sB" class="w-1/2 h-full bg-blue-500"></div></div>`;
                 let m = 0; let c = 0;
                 intervals.push(setInterval(() => {
                     m += Math.floor(Math.random()*4); c += Math.floor(Math.random()*4);
                     document.getElementById('mS').innerText = m; document.getElementById('cS').innerText = c;
                     document.getElementById('sB').style.width = (m/(m+c))*100 + "%";
-                    if(m > 120 || c > 120) { alert(m > c ? "Victory!" : "Defeat!"); closeModals(); }
+                    if(m > 100 || c > 100) closeModals();
                 }, 150));
             }, 2000);
         }
 
-        // 3. Marketing Simulation
         function openMarketingModal() {
             container.classList.remove('hidden');
-            body.innerHTML = `<h5 class="text-purple-400 font-mono text-[10px] uppercase tracking-widest mb-6">AI Content Pipeline</h5><div id="mLogs" class="grid grid-cols-1 gap-4"></div>`;
-            const mLogs = document.getElementById('mLogs');
-            const tasks = ["Analyzing Niche Trends...", "Scripting Reel Content...", "Generating Voice-over...", "Rendering 4K Vertical Video...", "Automating Upload to IG..."];
+            body.innerHTML = `<h5 class="text-purple-400 font-mono text-[10px] uppercase mb-6">Content Pipeline</h5><div id="mLogs" class="space-y-4"></div>`;
+            const tasks = ["Analyzing Trends...", "Scripting Reel...", "Rendering AI Voice...", "Scheduled for IG ✓"];
             let tIdx = 0;
             intervals.push(setInterval(() => {
                 if(tIdx < tasks.length) {
-                    mLogs.innerHTML += `<div class="glass-card p-4 rounded-xl text-xs text-slate-300 border-purple-500/20 animate-pulse">${tasks[tIdx]}</div>`;
-                } else {
-                    mLogs.innerHTML = `<div class="text-center py-10"><i data-lucide="check-circle" class="text-green-500 w-12 h-12 mx-auto mb-4"></i><p class="text-green-400 font-bold">REEL READY & SCHEDULED</p></div>`;
-                    lucide.createIcons(); clearInterval(intervals[0]);
-                }
-                tIdx++;
-            }, 1200));
+                    document.getElementById('mLogs').innerHTML += `<div class="glass-card p-4 rounded-xl text-xs">${tasks[tIdx]}</div>`;
+                    tIdx++;
+                } else clearInterval(intervals[0]);
+            }, 1000));
         }
 
-        // 4. Car Restoration Simulation
         function openCarModal() {
             container.classList.remove('hidden');
-            body.innerHTML = `<h5 class="text-orange-500 font-mono text-[10px] uppercase tracking-widest mb-8">Project: 1969 Stallion</h5>
+            body.innerHTML = `<h5 class="text-orange-500 font-mono text-[10px] mb-8 uppercase">Project Tracker</h5>
                 <div class="space-y-4">
-                    <div class="glass-card p-5 rounded-2xl flex justify-between items-center"><span class="text-sm text-white">Engine Blueprinting</span><span class="text-[9px] font-bold bg-green-500/20 text-green-400 px-3 py-1 rounded-full border border-green-500/30">COMPLETED</span></div>
-                    <div class="glass-card p-5 rounded-2xl flex justify-between items-center"><span class="text-sm text-white">Chassis Sandblasting</span><span class="text-[9px] font-bold bg-orange-500/20 text-orange-400 px-3 py-1 rounded-full border border-orange-500/30">IN PROGRESS</span></div>
-                    <div class="glass-card p-5 rounded-2xl flex justify-between items-center opacity-40"><span class="text-sm text-white">Custom Paint Seal</span><span class="text-[9px] font-bold bg-slate-500/20 text-slate-400 px-3 py-1 rounded-full border border-slate-500/30">QUEUED</span></div>
+                    <div class="glass-card p-5 rounded-2xl flex justify-between"><span class="text-white">Engine Overhaul</span><span class="text-green-400 text-[9px] font-bold">DONE</span></div>
+                    <div class="glass-card p-5 rounded-2xl flex justify-between"><span class="text-white">Interior Work</span><span class="text-orange-400 text-[9px] font-bold">70%</span></div>
                 </div>`;
         }
     </script>
